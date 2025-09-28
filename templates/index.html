@@ -267,49 +267,49 @@ club social y deportivo unidos por el deporte
 		<!-- end team -->
 
 		<!-- start newsletter -->
+		 
 		<div id="newsletter">
 			<div class="container">
+				<h2>Carreras</h2>
 				<div class="row">
-					<div class="col-md-12">
-						<div class="carreras">
-							<div class="texto-izquierda"></div>
-							<ul>
-								<h2>Carrera {{ info.modalidad_costo[1].nombre }}</h2>
-								<h3>lugar</h3>
-								<p>{{ info.lugar }} </p>
-								<h3>Tipo</h3>
-								<p>{{ info.tipo_carrera }} </p>
-								<h3>costo</h3>
-								<p>{{ info.modalidad_costo[1].valor }} </p>
-								<h3>Horario</h3>
-								<p>{{ info.horario }} </p>
-								<h3>Fecha</h3>
-								<p>{{ info.fecha }} </p>
-								
-							</ul>
-							
+				<div class="col-md-12">
+					<div class="carreras row">
+					
+					<!-- Columna izquierda -->
+					<div class="col-md-6">
+						
+						<h3>Lugar</h3>
+						<p><a href="#mimap">{{ info.lugar }}</a></p>
 
-							<div class="texto-derecha"></div>
-							<ul>
-								<h2>Carrera {{ info.modalidad_costo[2].nombre }}</h2>
-								<h3>lugar</h3>
-								<p>{{ info.lugar }} </p>
-								<h3>Tipo</h3>
-								<p>{{ info.tipo_carrera }} </p>
-								<h3>costo</h3>
-								<p>{{ info.modalidad_costo[2].valor }} </p>
-								
-								<h3>Horario</h3>
-								<p>{{ info.horario }} </p>
-								<h3>Fecha</h3>
-								<p>{{ info.fecha }} </p>
-								
-							</ul>
+						<h3>Tipo</h3>
+						<p>{{ info.tipo_carrera }}</p>
+
+						<h3>Costos</h3>
+						<p><strong>{{ info.modalidad_costo[2].nombre }}</strong> → {{ info.modalidad_costo[2].valor }}</p>
+						<p><strong>{{ info.modalidad_costo[1].nombre }}</strong> → {{ info.modalidad_costo[1].valor }}</p>
+					</div>
+
+					<!-- Columna derecha -->
+					<div class="col-md-6">
+						<h3>Horario</h3>
+						<p>{{ info.horario }}</p>
+
+						<h3>Fecha</h3>
+						<p>{{ info.fecha }}</p>
+
+						<!-- Botón violeta -->
+						<div class="boton mt-4">
+						<a href="{{ url_for('reg') }}" class="btn-violeta " data-wow-delay="2000">
+							Inscribite
+						</a>
 						</div>
 					</div>
+
+					</div> <!-- /.carreras -->
+				</div>
 				</div>
 			</div>
-		</div>
+			</div>
 		<!-- end newsletter -->
 
 
@@ -395,9 +395,9 @@ club social y deportivo unidos por el deporte
 					<div class="col-md-3 col-sm-4 wow fadeIn" data-wow-delay="0.9s">
 						<address>
 							<h3>Visitanos</h3>
-							<p><i class="fa fa-map-marker too-icon"></i> un lugar cualquiera, tandil</p>
-							<p><i class="fa fa-phone too-icon"></i> 010-010-0220</p>
-							<p><i class="fa fa-envelope-o too-icon"></i> UnidosPorElDeporte@gmail.com</p>
+							<p><i class="fa fa-map-marker too-icon"></i> {{ info.lugar }}</p>
+							<p><i class="fa fa-phone too-icon"></i> {{ info.numero_contacto }}</p>
+							<p><i class="fa fa-envelope-o too-icon"></i> {{ info.email }}</p>
 						</address>
 					</div>
 					

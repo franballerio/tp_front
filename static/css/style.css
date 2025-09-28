@@ -520,21 +520,9 @@ a
     display: block;
     height: auto;
 }
-.carreras {
-	display: flex;
-	justify-content: space-between; 
-	gap: 2rem; 
-}
 
-.texto-izquierda,
-.texto-derecha {
-	width: 48%;
-	padding: 1rem;
-	box-sizing: border-box;
-	
-	border-radius: 8px;
-	
-}
+
+
 /* end portfolio */
 
 /* start contact */
@@ -716,4 +704,36 @@ footer .social-icon
   object-fit: contain;  
   padding: 10px 0;      
 }
+.carreras {
+  
+	display: flex;
+	justify-content: center; 
+	gap: 2rem; 
+}
+.carreras h3 {
+    color: #e013e7;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.carreras h2 {
+    color: #FFFFFF;
+    line-height: 0px;
+    text-align: center;
+}
+.btn-violeta {
+  background-color: #e013e7;
+  color: white;
+  border: none;
+  padding: 20px 40px;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-violeta:hover {
+  background-color: #FFFFFF;
+  color: #e013e7;
+  text-decoration: none;
+}
+
 /* end templatemo 360 media quires */
