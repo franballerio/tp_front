@@ -520,6 +520,21 @@ a
     display: block;
     height: auto;
 }
+.carreras {
+	display: flex;
+	justify-content: space-between; 
+	gap: 2rem; 
+}
+
+.texto-izquierda,
+.texto-derecha {
+	width: 48%;
+	padding: 1rem;
+	box-sizing: border-box;
+	
+	border-radius: 8px;
+	
+}
 /* end portfolio */
 
 /* start contact */
