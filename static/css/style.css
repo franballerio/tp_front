@@ -3,28 +3,18 @@
 Template 2081 Solution
 
 http://www.tooplate.com/view/2081-solution
-
 */
-@charset "utf-8";
-/* CSS Document */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 body
 	{
 		background: #03010e;
-        font-family: 'Raleway', sans-serif;
+        /* font-family: 'Raleway', sans-serif;
 		font-weight: 400;
-        position: relative;
+        position: relative; */
 	}
 
 h2, h3, h4
     {   color: #FFFFFF;
-        font-weight: bold;
     }
 
 p
@@ -50,7 +40,9 @@ a
     }
 /* end all section */
 
-body nav, html body .navbar-default {
+
+
+/* body nav, html body .navbar-default {
     position: fixed !important;
     top: 0 !important;
     width: 100% !important;
@@ -59,11 +51,7 @@ body nav, html body .navbar-default {
     backdrop-filter: blur(10px) !important;
     z-index: 1000 !important;
     transition: all 0.3s ease !important;
-}
-
-#home {
-      padding-top: 0px;
-}
+} */
 
 .flexslider {
   margin: 0 0 60px;
@@ -167,6 +155,7 @@ body nav, html body .navbar-default {
         background: url('../images/divider-bg.jpg');
         background-size: cover;
         background-repeat: no-repeat;
+        background-position-y: center;
         color: #ffffff;
     }
 #divider h2
@@ -492,9 +481,6 @@ body nav, html body .navbar-default {
 }
 
 
-
-/* end portfolio */
-
 /* start contact */
 #contact
     {
@@ -556,72 +542,6 @@ body nav, html body .navbar-default {
     height: 320px;
   }
 /* end google map */
-
-/* start footer */
-footer
-    {
-        padding-top: 40px;
-        padding-bottom: 20px;
-    }
-footer p
-    {
-        line-height: 12px;
-    }
-footer .social-icon
-    {
-        top: 0px;
-    }
-/* end footer */
-
-.too-icon {
-	padding: 10px;
-}
-
-/* start social icon */
-.social-icon
-    {
-        position: relative;
-        padding: 0;
-        margin: 0;
-        top: 20px;
-    }
-.social-icon li
-    {
-        display: inline-block;
-        list-style: none;
-    }
-.social-icon li a
-    {
-        color: #e9b1ee;
-        font-size: 13px;
-        text-decoration: none;
-        transition: all 0.4s ease-in-out;
-        width: 40px;
-        height: 40px;
-        line-height: 40px;
-        text-align: center;
-    }
-.social-icon li a:hover
-    {
-        background: #f2f2f2;
-    }
-/* end social icon */
-.titulo-mapa {
-				color: #e013e7;
-				text-align: center;
-				margin-top: 20px;
-				margin-bottom: 20px;
-				}   
-			#mimap, #mimaplargo {
-				height: 400px;
-				width: 100%;
-				margin-bottom: 40px;
-			}
-
-@media only screen and (max-width: 1199px) {
-    .flexslider h1 { font-size: 30px; }
-    .flexslider h2 { font-size: 24px; }
-}
 
 /* start templatemo 768 media quires */
 @media only screen and ( max-width: 768px ) {
@@ -706,55 +626,6 @@ footer .social-icon
   text-decoration: none;
 }
 
-.bootstrap-off * {
-  all: unset; /* Resets all properties to their initial values */
-}
 
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(5);
-    justify-content: center;
-    align-items: center;
-}
 
-.logo {
-    height: 80px;
-    background: var(--gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    align-items: center;
-}
-
-.nav-links {
-    display: flex;
-    gap: 4rem;
-    align-items: center;
-}
-
-.nav-links a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: var(--text);
-}
-
-.cta-button {
-    background: var(--primary);
-    color: white;
-    padding: 0.5rem 1.5rem;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.cta-button:hover {
-    background: var(--primary-dark);
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
-}
 /* end templatemo 360 media quires */

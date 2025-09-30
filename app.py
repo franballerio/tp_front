@@ -22,7 +22,7 @@ def home():
             "Auspiciantes": ["Gatorade", "Adidas","Cruz roja"]
         }
     }
-    return render_template('index_no_bootstrap.html', info=evento[1])
+    return render_template('index.html', info=evento[1])
 
 @app.route('/register')
 def reg():
