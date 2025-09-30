@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <!-- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <!-- animate -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.min.css', external=true) }}">
+    {% block head %}{% endblock %}
+    <!-- magnific pop up -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css', external=true) }}">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css', external=true) }}">
+    <!-- google font -->
+    <!-- <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,800' rel='stylesheet' type='text/css'> -->
+    <!-- custom -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css', external=true) }}">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}">
+    
+    <title>{% block title %}Base HTML{% endblock %}</title>
+</head>
+    <header>
+                <!-- Navigation -->
+        <nav class="custom-nav">   
+            <div class="nav-container" class="bootstrap-off">
+                <div class="nav-links">
+                    <a href="#">Info</a>
+                    <a href="#">Sponsors</a>
+                    <a href="#"> <img class="logo" src="{{ url_for('static', filename='images/logo.png') }}""></img> </a>
+                    <a href="#">Contacto</a>
+                    <a href="{{ url_for('reg') }}">Inscribite</a>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <div class="mobile-nav" id="mobileNav">
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="#" class="cta-button">Start Free Trial</a>
+            </div>
+        </nav>
+    </header>
+    
+    {% block content %}
+    {% endblock %}
+    <!-- start footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-7" id="footer-row">
+                    <p>Copyright &copy; 2017 Solution Company</p>
+                    <small>Designed by FIUBA<a rel="nofollow" href="http://www.tooplate.com" target="_parent">Tooplate</a></small>
+                </div>
+                <div class="col-md-4 col-sm-5" id="footer-row">
+                    <ul class="social-icon">
+                        <li><a href="#" class="fa fa-facebook"></a></li>
+                        <li><a href="#" class="fa fa-twitter"></a></li>
+                        <li><a href="#" class="fa fa-instagram"></a></li>
+                        <li><a href="#" class="fa fa-pinterest"></a></li>
+                        <li><a href="#" class="fa fa-google"></a></li>
+                        <li><a href="#" class="fa fa-github"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+    {% block scripts %}
+    {% endblock %}    
+</html>
