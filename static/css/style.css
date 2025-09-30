@@ -626,6 +626,11 @@ a
   text-decoration: none;
 }
 
-
+/* Map Container Styles */
+#mimap, #mimaplargo {
+  height: 450px;
+  width: 100%;
+  margin-bottom: 30px; /* Adds some space below each map */
+}
 
 /* end templatemo 360 media quires */

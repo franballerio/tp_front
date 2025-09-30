@@ -1,5 +1,3 @@
-
-
 // Flexslider
 $(function(){
   /* FlexSlider */
@@ -18,8 +16,6 @@ $(function(){
       enabled: true
     }    
   });
-
-  loadGoogleMap();
 });
 
 // isotope

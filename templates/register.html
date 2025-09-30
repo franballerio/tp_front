@@ -42,9 +42,9 @@
                             </div>
                             <div class="form-group">
                                 <label for="message">Info importante sobre ti</label>
-                                <textarea id="message" name="message" rows="6" placeholder="Problema de salud, alergia, etc..." required></textarea>
+                                <textarea id="message" name="message" rows="6" placeholder="Problema de salud, alergia, etc..."></textarea>
                             </div>
-                            <button type="submit" class="submit-button">Reservar</button>
+                            <button type="submit" class="submit-button" id="reservar">Reservar</button>
                         </form>
                     </div>
                 </div>
@@ -54,4 +54,40 @@
             </div>
         </div>
     </section>
+
+    {% block scripts %}
+    <script>
+        document.getElementById("contactForm").addEventListener('submit', (e) => {
+            // Always prevent the default form submission
+            e.preventDefault()
+            
+            const form = e.target
+            const info = new FormData(form)
+
+            fetch('http://localhost:5000/send', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: info.get('name'),
+                    email: info.get('email'),
+                    subject: info.get('subject'),
+                    message: info.get('message')
+                })
+            }).then(res => {
+                if (res.ok) {
+                    alert("Inscripción realizada con éxito! Revisa tu correo para más información.")
+                    window.location.href = '/'
+                } else {
+                    alert("Hubo un error al enviar el formulario. Por favor, intenta nuevamente.")
+                }
+            }).catch(error => {
+                console.error('Error:', error);
+                alert("Hubo un error al enviar el formulario. Por favor, intenta nuevamente.")
+            })
+        })
+    </script>
+    {% endblock scripts %}
+
 {% endblock %}
