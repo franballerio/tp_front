@@ -5,6 +5,14 @@ Template 2081 Solution
 http://www.tooplate.com/view/2081-solution
 
 */
+@charset "utf-8";
+/* CSS Document */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body
 	{
@@ -31,6 +39,7 @@ a
         transition: all 0.4s ease-in-out;
     }
 
+
 /* start all section */
 #service, #divider, #about, #team, #newsletter,
  #pricing, #portfolio, #client, #contact
@@ -41,60 +50,21 @@ a
     }
 /* end all section */
 
-/* start nagivation */
-.navbar-default
-    {
-        background: #210622;
-        border: none;
-        box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.08);
-        margin: 0 !important;
-        padding: 0;
-    }
-.navbar-default .navbar-brand
-    {
-        padding-top: 4px;
-        padding-bottom: 60px;
-        
-
-    }
-
-.navbar-default .navbar-nav li a
-    {
-        font-size: 13px;
-        font-weight: bold;
-        line-height: 35px;
-        
-    }
-.navbar-default .navbar-nav li a:hover
-    {
-        color: #7a097a;
-        
-    }
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
-  color: #7d0688;
-  background-color: transparent;
+body nav, html body .navbar-default {
+    position: fixed !important;
+    top: 0 !important;
+    width: 100% !important;
+    padding: 1rem 4rem !important;
+    background: rgba(41, 0, 10, 0.8) !important;
+    backdrop-filter: blur(10px) !important;
+    z-index: 1000 !important;
+    transition: all 0.3s ease !important;
 }
-.navbar-default .navbar-toggle
-    {
-        border: none;
-        padding-top: 16px;
-    }
-.navbar-default .navbar-toggle .icon-bar
-    {
-        background: #ca3ac3;
-        border-color: transparent;
-    }
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus { background-color: transparent }
-/* end navigation */
 
-/* start home */        
-#home
-	{
-      padding-top: 65px;
-	}
+#home {
+      padding-top: 0px;
+}
+
 .flexslider {
   margin: 0 0 60px;
   background: #fff;
@@ -736,4 +706,55 @@ footer .social-icon
   text-decoration: none;
 }
 
+.bootstrap-off * {
+  all: unset; /* Resets all properties to their initial values */
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5);
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    height: 80px;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--text);
+}
+
+.cta-button {
+    background: var(--primary);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+}
 /* end templatemo 360 media quires */

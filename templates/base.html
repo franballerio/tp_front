@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}">
+    
+    <title>{% block title %}Base HTML{% endblock %}</title>
+</head>
+    <header>
+                <!-- Navigation -->
+        <nav>   
+            <div class="nav-container" class="bootstrap-off">
+                <div class="nav-links">
+                    <a href="#">Info</a>
+                    <a href="#">Sponsors</a>
+                    <a href="#"> <img class="logo" src="{{ url_for('static', filename='images/logo.png') }}""></img> </a>
+                    <a href="#">Contacto</a>
+                    <a href="{{ url_for('reg') }}">Inscribite</a>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <div class="mobile-nav" id="mobileNav">
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="#" class="cta-button">Start Free Trial</a>
+            </div>
+        </nav>
+    </header>
+    
+    {% block content %}
+    {% endblock %}
+</html>

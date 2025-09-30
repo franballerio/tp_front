@@ -22,11 +22,15 @@ def home():
             "Auspiciantes": ["Gatorade", "Adidas","Cruz roja"]
         }
     }
-    return render_template('index.html', info=evento[1])
+    return render_template('index_no_bootstrap.html', info=evento[1])
 
 @app.route('/register')
 def reg():
     return render_template('register.html')
+
+@app.route('/base')
+def base():
+    return render_template('base.html')
 
 if __name__ == '__main__':
     app.run("localhost", port= 5000, debug=True)

@@ -33,35 +33,10 @@ club social y deportivo unidos por el deporte
 		
 
 	</head>
-	<body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
-
-		<!-- start navigation -->
-		<div class="navbar navbar-fixed-top navbar-default" role="navigation">
-			<div class="container">
-				<div class="navbar-header">
-					<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-						<span class="icon icon-bar"></span>
-						<span class="icon icon-bar"></span>
-						<span class="icon icon-bar"></span>
-					</button>
-					<a href="{{ url_for('home') }}" class="navbar-brand">
-					<img src="{{ url_for('static', filename='images/logo.png', external=true) }}" class="img-responsive logo-chico"  alt="logo">
-					</a>
-				</div>
-				<div class="collapse navbar-collapse">
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#home" class="smoothScroll">HOME</a></li>
-						<li><a href="#service" class="smoothScroll">Informacion</a></li>
-						<li><a href="#about" class="smoothScroll">Competidores</a></li>
-						<li><a href="#team" class="smoothScroll">Patrocinadores</a></li>
-						<li><a href="#contact" class="smoothScroll">Contacto</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-    
-		<!-- end navigation -->
-
+<body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
+	{% extends "base.html" %}
+	
+	{% block content %}
 		<!-- start home -->
 		<section id="home" class="text-center">
 		  <div class="templatemo_headerimage">
@@ -492,6 +467,7 @@ club social y deportivo unidos por el deporte
 			
 			L.polyline(puntosLargos, { color: 'green' }).addTo(maplarg);
 		</script>
-		
-	</body>
+{% endblock %}
+</body>
+
 </html>
