@@ -629,7 +629,7 @@ a
 /* Map Container Styles */
 #mimap, #mimaplargo {
   height: 450px;
-  width: 100%;
+  width: 70%;
   margin-bottom: 30px; /* Adds some space below each map */
   margin-left: auto;
   margin-right: auto;
